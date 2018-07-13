@@ -1,0 +1,115 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+ }
+
+body{
+	background-color:#f7f7f7;
+	font-size: 0.8em;
+	font-family:"微软雅黑";
+	color: #2b3f55;
+}
+
+li{
+	list-style: none;
+}
+
+.header{
+	background-color: white;
+}
+
+.profile{
+	width:800px;
+	margin:0 auto;
+	padding:80px 0;
+}
+
+.profile h1{
+	font-weight:bolder;
+}
+
+.profile p{
+	margin: 10px 0 10px;
+}
+
+.profile .links{
+	margin-top:30px;
+}
+
+.info{
+	display: flex;
+	width:800px;
+	margin:0 auto;
+	justify-content: space-between;
+	padding:120px 0;
+}
+
+.info h2{
+	font-size:1.2em;
+	font-weight: bolder;
+	margin-bottom: 20px;
+}
+
+.info li{
+	margin: 10px 0 10px;
+}
+
+.pro_wrap{
+	width: 800px;
+	margin:0 auto;	
+}
+
+.pro_wrap h2{
+	margin-bottom: 30px;
+	font-size: 1.3em;
+}
+
+.projects{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.project{
+	width: 350px;
+	background-color: white;
+	padding:15px;
+	margin-bottom: 50px;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.07);
+	border-radius: 3px;
+}
+
+.project h3{
+	margin:30px 0;
+	font-size: 1.2em;
+}
+
+.project p{
+	margin-bottom: 20px;
+	line-height:1.7em;
+}
+
+.project span{
+	margin-right: 30px;
+}
+
+.gold{
+	color: gold;
+}
+
+.green{
+	color:green;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*<img src="http://placeimg.com/320/320/tech">*/
