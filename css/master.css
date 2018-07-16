@@ -15,9 +15,22 @@ li{
 	list-style: none;
 }
 
+a{
+	text-decoration: none;
+	color: #2b3f55;
+
+}
+
+a:hover{
+	color:#ea4c89
+}
+
 .header{
 	background-color: white;
 }
+
+
+
 
 .profile{
 	width:800px;
@@ -37,6 +50,15 @@ li{
 	margin-top:30px;
 }
 
+.profile .links img{
+	width: 15px;
+	margin-right: 15px;
+}
+	
+.links img:hover{
+	opacity: 0.5;
+}
+	
 .info{
 	display: flex;
 	width:800px;
@@ -51,6 +73,10 @@ li{
 	margin-bottom: 20px;
 }
 
+.edu img{
+	width: 20px;
+	vertical-align: bottom;
+}
 .info li{
 	margin: 10px 0 10px;
 }
@@ -80,6 +106,10 @@ li{
 	border-radius: 3px;
 }
 
+.project img{
+	width:100%
+}
+
 .project h3{
 	margin:30px 0;
 	font-size: 1.2em;
@@ -102,14 +132,58 @@ li{
 	color:green;
 }
 
+.footer{
+	margin:50px auto;
+}
+
+.footer p{
+	text-align: center;
+
+}
+
+.triangle{
+	opacity: 0.5;
+	position: absolute;
+	width: 100px;
+	animation-name: float;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
 
 
+@keyframes float{
+	from{transform:translate(-100px,400px) rotate(0);}
+	to{transform:translate(800px,-100px) rotate(300deg);}
+}
 
+@media (max-width:700px) {
+	.header{
+		width:100%;
+	}
+	.profile {
+		width:90%;
+		margin:0 auto;
+	}
+	
+	.info {
+		width:90%;
+		margin:0 auto;
+	}
+	
+	.pro_wrap {
+		width:90%;
+		margin:0 auto;
+	}
+	
+	.info{
+	display:block;
+	}
+	
+	.card{
+		margin-bottom:50px;
+	}
 
-
-
-
-
-
+}
 
 /*<img src="http://placeimg.com/320/320/tech">*/
