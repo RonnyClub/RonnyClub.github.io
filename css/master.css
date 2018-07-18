@@ -22,7 +22,7 @@ a{
 }
 
 a:hover{
-	color:#ea4c89
+	color:#03B3AD
 }
 
 .header{
@@ -73,8 +73,9 @@ a:hover{
 	margin-bottom: 20px;
 }
 
-.edu img{
+.info img{
 	width: 20px;
+	margin-right: 6px;
 	vertical-align: bottom;
 }
 .info li{
@@ -89,6 +90,12 @@ a:hover{
 .pro_wrap h2{
 	margin-bottom: 30px;
 	font-size: 1.3em;
+}
+
+.pro_wrap h2 img{
+	width:20px;
+	vertical-align:middle;
+	margin-right: 10px;
 }
 
 .projects{
@@ -118,28 +125,31 @@ a:hover{
 .project p{
 	margin-bottom: 20px;
 	line-height:1.7em;
+	text-indent:2em;
 }
 
 .project span{
-	margin-right: 30px;
+	margin-right: 15px;
 }
 
-.gold{
-	color: gold;
+.purple{
+	color: purple;
 }
 
 .green{
 	color:green;
 }
 
-.footer{
+.deepskyblue{
+	color:deepskyblue;
+}
+
+footer{
 	margin:50px auto;
-}
-
-.footer p{
 	text-align: center;
-
+	color: gray;
 }
+
 
 .triangle{
 	opacity: 0.5;
