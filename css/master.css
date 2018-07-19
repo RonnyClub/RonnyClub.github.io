@@ -166,9 +166,13 @@ footer{
 	text-align: center;
 }
 
+.video-container video{
+	width:800px;
+}
+
 @keyframes float{
 	from{transform:translate(-100px,400px) rotate(0);}
-	to{transform:translate(800px,-100px) rotate(300deg);}
+	to{transform:translate(400px,-100px) rotate(300deg);}
 }
 
 @media (max-width:700px) {
@@ -197,7 +201,10 @@ footer{
 	.card{
 		margin-bottom:50px;
 	}
-
+	
+	.video-container video{
+		width: 90%;
+	}
 }
 
 
