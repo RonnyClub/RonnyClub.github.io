@@ -161,6 +161,10 @@ footer{
 	animation-direction: alternate;
 }
 
+.video-container{
+	margin:50px 0;
+	text-align: center;
+}
 
 @keyframes float{
 	from{transform:translate(-100px,400px) rotate(0);}
@@ -195,5 +199,8 @@ footer{
 	}
 
 }
+
+
+
 
 /*<img src="http://placeimg.com/320/320/tech">*/
