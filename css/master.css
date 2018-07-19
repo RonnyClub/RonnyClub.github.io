@@ -170,6 +170,11 @@ footer{
 	width:800px;
 }
 
+.youku{
+	margin:50px 0;
+	text-align: center;
+}
+
 @keyframes float{
 	from{transform:translate(-100px,400px) rotate(0);}
 	to{transform:translate(400px,-100px) rotate(300deg);}
@@ -203,6 +208,10 @@ footer{
 	}
 	
 	.video-container video{
+		width: 90%;
+	}
+	
+	.youku embed{
 		width: 90%;
 	}
 }
