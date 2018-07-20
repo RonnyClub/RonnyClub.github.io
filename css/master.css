@@ -188,6 +188,16 @@ footer{
 	text-align: center;
 }
 
+.bilibili{
+	margin:50px auto;
+	text-align: center;
+}
+
+.bilibili iframe{
+	width: 800px;
+	height: 450px;
+}
+
 @keyframes float{
 	from{transform:translate(-100px,400px) rotate(0);}
 	to{transform:translate(400px,-100px) rotate(300deg);}
