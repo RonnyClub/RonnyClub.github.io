@@ -42,6 +42,8 @@ a:hover{
 	font-weight:bolder;
 }
 
+
+
 .profile p{
 	margin: 10px 0 10px;
 }
@@ -174,6 +176,17 @@ footer{
 	animation-direction: alternate;
 }
 
+.video_test h2{
+	width: 800px;
+	margin: 50px auto 0;
+}
+
+.video_test h2 img{
+	width: 25px;
+	vertical-align:  middle;
+	margin-right: 10px;
+}
+
 .video-container{
 	margin:50px 0;
 	text-align: center;
@@ -183,15 +196,15 @@ footer{
 	width:800px;
 }
 
-.youku{
+/*.youku{
 	margin:50px 0;
 	text-align: center;
-}
+}*/
 
-.bilibili{
+/*.bilibili{
 	margin:50px auto;
 	text-align: center;
-}
+}*/
 
 .bilibili iframe{
 	width: 800px;
@@ -228,6 +241,11 @@ footer{
 	
 	.card{
 		margin-bottom:50px;
+	}
+	
+	.video_test{
+		width: 90%;
+		margin:0 auto;
 	}
 	
 	.video-container video{
