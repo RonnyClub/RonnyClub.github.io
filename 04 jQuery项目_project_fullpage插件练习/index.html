@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="icon" type="" href="img/favicon.ico" />
+		<!--引入插件css文件-->
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+		<!--引用baidu在线jQuery库-->
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<!--引入插件js文件-->
+		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+		<title>fullpage插件项目</title>
+
+		<style type="text/css">
+			h3 {
+				font-size: 50px;
+				font-weight: 900;
+				font-family: "百度综艺简体", "微软雅黑", "黑体";
+				text-align: center;
+			}
+			
+			p {
+				margin: 0 auto;
+				font-size: 18px;
+				font-weight: 100;
+				font-family: "微软雅黑", "黑体";
+				width: 1200px;
+				text-align: left;
+				/*设置首行缩进两个字符*/
+				text-indent: 2em;
+			}
+			
+			.page_content {
+				margin: 0 auto;
+				color: white;
+			}
+			
+			.page1 h3 {
+				position: relative;
+				top: -50px;
+				opacity: 0;
+			}
+			
+			.page1 p {
+				position: relative;
+				top: 50px;
+				opacity: 0;
+			}
+			
+			.page2 h3 {
+				position: relative;
+				left: -50px;
+				opacity: 0;
+			}
+			
+			.page2 p {
+				position: relative;
+				left: 50px;
+				opacity: 0;
+			}
+			
+			.slide p {
+				text-align: center;
+			}
+			
+			
+			/*设置锚点导航的样式*/
+			#menu {
+				margin: 0;
+				padding: 0;
+				position: fixed;
+				right: 20px;
+				top: 20px;
+				list-style-type: none;
+				z-index: 70;
+			}
+			
+			#menu li {
+				float: left;
+				margin: 0 10px 0 0;
+				font-size: 14px;
+			}
+			
+			#menu a {
+				float: left;
+				padding: 10px 20px;
+				background-color: #fff;
+				color: #333;
+				text-decoration: none;
+			}
+			
+			#menu .active a {
+				color: #fff;
+				background-color: #333;
+			}
+		</style>
+
+		<script type="text/javascript">
+			$(function() {
+				//设置初始动画
+				$(".page1").find("h3").animate({
+					top: 0,
+					opacity: 1
+				}, 1500).parent().find("p").animate({
+					top: 0,
+					opacity: 1
+				}, 1500)
+
+				//使用插件设置各个参数
+				$("#fullPage").fullpage({
+					//设置各个page的颜色
+					sectionsColor: ["#e69138", "#3d85c6", "#1bbc9b"],
+
+					//设置页面循环
+					continuousVertical: true,
+
+					//					设置页面右侧导航圆点
+					'navigation': true,
+
+					//设置页面锚点导航
+					anchors: ['page1', 'page2', 'page3', 'page4'],
+					menu: '#menu',
+
+					//设置页面进入和离开的回调函数
+					//页面进入
+					afterLoad: function(anchor, index) {
+						if(index == 2) {
+							$(".page2").find("h3").animate({
+								left: 0,
+								opacity: 1
+							}, 1500).parent().find("p").animate({
+								left: 0,
+								opacity: 1
+							}, 1500)
+
+						}
+
+					}
+
+				});
+				setInterval(function() {
+					$.fn.fullpage.moveSlideRight();
+				}, 5000);
+			})
+		</script>
+	</head>
+
+	<body>
+		<ul id="menu">
+			<li data-menuanchor="page1" class="active">
+				<a href="#page1">第一屏</a>
+			</li>
+
+			<li data-menuanchor="page2">
+				<a href="#page2">第二屏</a>
+			</li>
+			<li data-menuanchor="page3">
+				<a href="#page3">第三屏</a>
+			</li>
+
+		</ul>
+		<div id="fullPage">
+			<div class="section">
+				<div class="page_content page1">
+					<h3>fullpage练习项目</h3>
+					<p>fullPage.js 是一个基于 jQuery 的插件，它能够很方便、很轻松的制作出全屏网站。如今我们经常能见到全屏网站，尤其是国外网站。这些网站用几幅很大的图片或色块做背景，再添加一些简单的内容，显得格外的高端大气上档次。如果你也希望你的网站能设计成全屏的，显得更上档次，你可以试试 fullPage.js。</p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="page_content page2">
+					<h3>fullPage回调函数效果</h3>
+					<p>"滚动到某一屏后的回调函数，接收 anchorLink 和 index 两个参数。 anchorLink 是锚链接的名称 index 是section的索引，从1开始计算 在没有设置锚文本的情况下，只有使用唯一的index参数。"
+					</p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="page_content page3">
+					<div class="slide">
+						<h3> 页面横向slide</h3>
+						<p>这个页面可以做页面滑动</p>
+					</div>
+					<div class="slide">
+						<h3> 页面横向slide-第二屏</h3>
+						<p>本实例设定为3000毫秒的滑动间隔时间</p>
+					</div>
+					<div class="slide">
+						<h3> 页面横向slide-第三屏</h3>
+						<p>代码：setInterval(function(){ $.fn.fullpage.moveSlideRight(); }, 5000);</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+
+</html>

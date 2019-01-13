@@ -1,0 +1,467 @@
+/*基本效果*/
+.w {
+	width: 1190px;
+	margin: 0 auto;
+}
+
+body{
+	background-color: #f0f3ef;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.jd_red{
+	color: #f10215 !important;
+}
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
+
+input{
+	margin:0;
+	padding: 0;
+	border: none;
+	appearance: none;
+	outline: medium;
+}
+
+p,h5{
+	margin: 0;
+	padding: 0;
+}
+/*头部（广告）效果*/
+header {
+	height: 80px;
+	background-color: black;
+	z-index: 1;
+}
+
+.header_image {
+	display: block;
+	height: 80px;
+	width: 1190px;
+	z-index: 3;
+	background-image: url(../img/nav_bar.jpg);
+	/*margin: 0 auto;*/
+}
+
+
+/*导航 shortcut效果*/
+.shortcut {
+	height: 30px;
+	background-color: #e3e4e5;
+	border-bottom: 1px solid #777777;
+	line-height: 30px;
+	font-size: 13px;
+}
+
+.shortcut .city{
+	margin-left: 200px;
+}
+
+.shortcut .fr li{
+	float: left;
+}
+
+.space{
+	height: 10px;
+	width: 1px;
+	background-color:black ;
+	margin: 10px 12px 0;
+}
+      /*悬停变色效果*/
+#shortcut a:hover{
+	color: #F50515;
+}
+
+
+/*中间部分*/
+.mobile_jd{
+	position: relative;
+}
+
+.mobile_jd img{
+	position: absolute;
+	left:0;
+	top: 30px;
+	border: 1px solid crimson;
+}
+
+.middle{
+	height: 140px;
+	/*background-color: pink;*/
+	position: relative;
+	width: 1190px;
+	margin: 0 auto;
+}
+
+.middle img{
+	position: absolute;
+	top: -30px;
+}
+
+.m_center{
+	height: 140px;
+	width:550px ;
+	/*background-color: aquamarine;*/
+	margin: 0 auto;
+	position: relative;
+}
+
+.c_search{
+	width: 550px;
+	height: 35px;
+	position: absolute;
+	top: 25px;
+}
+
+.c_search>.text{
+	padding: 4px 44px 4px 4px;
+	width: 450px;
+	height: 25px;
+	position: absolute;
+	border: 1px solid transparent;
+	left: 0;
+}
+
+.c_search>.button{
+	border: none;
+	display: inline;
+	width: 50px;
+	height: 35px;
+	background-color: #F10215;
+	position: absolute;
+	right: 0;
+	/*appearance: none;*/
+	outline: medium;
+	line-height: 35px;
+}
+
+.m_center>.c_search>.photoer{
+	position: absolute;
+	right: 65px;
+	top:10px ;
+	height:15px ;
+	width: 19px;
+	/*background-color: hotpink;*/
+	overflow: hidden;
+}
+
+.recommend{
+	width:550px ;
+	position: absolute;
+	top: 65px;
+	height: 20px;
+	/*background-color: ghostwhite;*/
+	overflow: hidden;
+	line-height: 20px;
+}
+
+.recommend>ul>li{
+
+	float: left;
+	margin:0 10px;
+	font-size: 10px;
+	color: darkslategrey;
+}
+
+
+#navitems {
+   position: absolute;
+   bottom: 0;
+   height: 40px;
+   /*background-color: blanchedalmond;*/
+   left:50%;
+   margin-left: -395px;
+   width: 790px;
+   overflow: hidden;
+   padding-top: 20px;
+line-height: 40px;
+}
+
+
+#navitems>ul>li{
+	float:left;
+	margin: 0 12px;
+}
+
+#navitems>ul>li>a:hover{
+	color: #F10215;
+}
+
+.m_sale{
+	/*overflow: hidden;*/
+	cursor: pointer;
+	position: absolute;
+	width: 190px;
+	height:40px ;
+	right: 0;
+	bottom: 0;
+	/*background-color: #DC143C;*/
+	background-image: url(../img/middle_sale.png);
+}
+
+/*轮播图开始*/
+.grid{
+	height: 480px;
+	background: #7FFFD4;
+	margin-top: 20px;
+}
+
+
+
+/*轮播图第一部分*/
+
+.grid_col1{
+	width: 190px;
+	height:100% ;
+	overflow: hidden;
+	background-color: #6e6568;
+}
+
+.grid_col1 ul{
+	padding: 10px;
+}
+
+.grid_col1 li{
+	height:26px ;
+	line-height: 26px;
+	color: white;
+	
+}
+
+.grid_col1 li a{
+	height:26px ;
+	line-height: 26px;
+	color: white;
+	
+}
+
+/*轮播图第二部分*/
+
+.grid_col2{
+	margin-left: 10px;
+	width: 790px;
+	height:100% ;
+/*	overflow: hidden;
+*/	background-color: #6e6568;
+}
+
+.grid_col2_t{
+	width: 790px;
+	height: 340px;
+/*	overflow: hidden;
+*/	background-color: bisque;
+	position: relative;
+}
+
+.grid_col2_t img{
+	width: 790px;
+	height: 340px;
+	position:absolute
+
+}
+
+.arrow_l{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform:translateY(-50%);
+	width: 30px;
+	height: 60px;
+	background-color: rgba(0,0,0,0.3);
+	font-size: 20px;
+	color: white;
+	line-height: 60px;
+	text-align: center;
+}
+
+.arrow_l:hover{
+	background-color: rgba(0,0,0,0.6);
+}
+
+.arrow_r{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform:translateY(-50%);
+	width: 30px;
+	height: 60px;
+	background-color: rgba(0,0,0,0.3);
+	font-size: 20px;
+	color: white;
+	line-height: 60px;
+	text-align: center;
+}
+
+.arrow_r:hover{
+	background-color: rgba(0,0,0,0.6);
+}
+
+
+.circle{
+	bottom: 20px;
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 175px;
+	height: 20px;
+	background-color: gray;
+	border-radius: 10px;
+	padding-left: 8px;
+}
+
+.grid_current{
+	background-color: #F10215!important;
+}
+
+.circle li{
+	height: 12px;
+	width:12px ;
+	border-radius:50% ;
+	background-color:#FFFFFF ;
+	float:left ;
+	margin: 4px 10px;
+	cursor: pointer;
+}
+
+.grid_col2_b{
+	width: 790px;
+	height:130px;
+	background-color: chartreuse;
+	margin-top: 10px;
+}
+
+.grid_col2_b_left{
+	float: left;
+	height:130px ;
+	width: 390px;
+	background-color: beige ;
+}
+
+.grid_col2_b_right{
+	float: right;
+	height:130px ;
+	width: 390px;
+	background-color:  blueviolet ;
+}
+
+
+/*轮播图第三部分*/
+
+.grid_col3{
+	width:190px ;
+	height: 100%;
+	background-color: red;
+}
+
+
+/*尾部开始*/
+.footer{
+	margin-top: 100px;
+	height: 666px;
+	background-color: blanchedalmond;
+}
+
+.mod_service{
+	height: 43px;
+	background-color: aquamarine;
+	padding: 30px 0;
+	border-bottom: 1px solid gray;
+}
+
+.service_li{
+	position: relative;
+	margin-right: 1px;
+	width:296px ;
+	height:43px ;
+	float: left;
+	background-color: #DC143C;
+	line-height:43px ;
+}
+
+.service_h5{
+	left: 30px;
+	position: absolute;
+	height:43px ;
+	width:36px ;
+	background-color: #ADD8E6;
+	background-image: url(../img/DKHS.png);
+	background-position: 0 -43px;
+}
+
+
+.service_p{
+	margin-left: 85px;
+	font-weight: 800;
+}
+
+.mod_help{
+	height: 200px;
+	background-color: lightblue ;
+	margin-top: 10px;
+}
+
+.help_left{
+}
+
+.help_ul{
+	width: 192px;
+	float: left;
+}
+
+
+
+.help_ul li{
+	font-size: 12px;
+}
+
+.help_right{
+	margin-right: 20px;
+	margin-top: 20px;
+	width: 200px;
+	height:150px ;
+	background-image: url(../img/jd_brand.png);
+}
+
+.help_right p{
+	width: 180px;
+}
+.help_check{
+	text-align: right;
+}
+
+
+.mod_copyright{
+	height: 263px;
+	background-color: plum;
+	text-align: center;
+}
+
+.mod_copyright p{
+	line-height: 30px;
+	font-size: 12px;
+}
+
+.mod_copyright a{
+	display: inline-block;
+	width: 20px;
+	height: 10px;
+	margin: o 10px;
+	background-color: red;
+}
