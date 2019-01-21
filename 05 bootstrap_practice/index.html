@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	
+	<!--jumbotron用来创建超大屏幕-->
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>本项目基于bootstrap实现</h1>
+  <h2>本项目支持响应式布局</h2> 
+</div>
+	
+	
+	<!--导航栏总布局-->
+<nav class="navbar navbar-inverse">
+	<!--设置容器-->
+	<div class="container-fluid" id="">
+		<!--导航 头部-->
+		<div class="navbar-header" id="">
+			<a class="navbar-brand" href="">My Bootstrap</a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+		</div>
+		
+		<!--导航  导航条-->
+		<div class="collapse navbar-collapse" id="myNavbar" >
+			<ul class="nav navbar-nav navbar-left">
+				<li class="active" ><a href="">首页</a></li>
+				<li><a href="">发现</a></li>
+				<li><a href="">同城</a></li>
+				
+				<li class="dropdown">
+					<a class="data-toggle"  data-toggle="dropdown" href="">活动 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="">设计大赛</a></li>
+						<li><a href="">专题策划</a></li>
+						<li class="divider"></li>
+						<li><a href="">线上活动</a></li>
+						<li><a href="">线下活动</a></li>
+					</ul>
+				</li>
+				<li><a href="">职位</a></li>
+			</ul>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li ><a href="">登录</a></li>
+				<li> <button type="button" class="btn btn-primary navbar-btn" style="margin: 7px 0;">开始吧!</button>	</li>
+				
+			</ul>				
+			</ul>
+		</div>
+	</div>
+</nav>
+</html>
