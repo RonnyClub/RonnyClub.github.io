@@ -1,0 +1,22 @@
+v-if控制——元素将从DOM节点移除
+v-show控制——元素的style将设定 display:none
+
+<div v-if="show"></div>
+<div v-show="show"></div>
+
+其中v-show的性能更好,因为不会频繁的把元素从DOM删除添加
+
+
+--------------
+
+<div v-if="show"></div>
+<div v-else></div>
+
+v-if和v-else可以成对出现,效果互反,两者中间不可以有隔断
+
+--------------
+
+<div v-if="show==='a'">
+<div v-else-if="show==='b'">
+<div v-else>
+这三个可以在里面作判断语句来控制显示了,通过判断其中的布尔值来控制显示,只会显示其中一个

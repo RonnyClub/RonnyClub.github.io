@@ -1,0 +1,43 @@
+1/利用<li is="row">
+
+打个比方,<ul>标签下一般是<li>标签,为了避免解析出错
+不应用下列写法:
+<ul>
+	<row></row>	
+</ul>
+而应当使用下述写法:
+<ul>
+	<li is="row"></li>
+</ul>
+
+-----------------
+2/在子组件中定义data时,必须定义为函数,用return返回需要使用的 数据
+<!DOCTYPE html>
+<html>
+<head>
+	<title>子组件的data用函数</title>
+	<script type="text/javascript" src="./vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		<row></row>		
+		<row></row>		
+		<row></row>		
+	</div>
+</body>
+<script type="text/javascript">
+
+	Vue.component("row",{
+		data:function(){
+			return {
+				content:"牛逼轰轰"
+			}
+		},
+		template:"<li>{{content}}</li>"
+	})
+
+	var vm=new Vue({
+		el:'#root'
+	})
+</script>
+</html>

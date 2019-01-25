@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ref的用法</title>
+	<script type="text/javascript" src="./vue.js"></script>
+</head>
+
+
+<body>
+	<div id="app">
+		<counter ref="one"  @count="countRes"></counter>
+		<counter ref="two"  @count="countRes"></counter>
+		<div>{{sum}}</div>
+	</div>
+</body>
+
+
+<script type="text/javascript">
+
+	Vue.component("counter",{
+		template:"<li @click='counterClick'>{{number}}</li>",
+		data:function(){
+			return {
+				number:0
+			}
+		},
+		methods:{
+			counterClick:function(){
+				this.number++;
+				this.$emit('count')
+			}
+		}
+	})
+
+
+	var vm=new Vue({
+		el:"#app",
+		data:{
+			sum:0
+		},
+		methods:{
+			countRes:function(){
+				this.sum=this.$refs.one.number+this.$refs.two.number
+			}
+		}
+	})
+</script>
+</html>

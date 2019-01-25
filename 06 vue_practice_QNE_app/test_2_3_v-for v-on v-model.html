@@ -1,0 +1,34 @@
+<!-- 本节学习v-for v-on v-model -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>list_test</title>
+	<script type="text/javascript" src="./vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<input type="text" name="" v-model="content">
+	<button v-on:click="btnClick">提交</button>
+	<ul>
+		<li v-for="item in list">{{item}}</li>
+	</ul>
+</div>
+</body>
+
+<script type="text/javascript">
+	var v=new Vue(
+		{
+		el:'#app',
+		data:{
+			list:[],
+			content:""
+		},
+		methods:{
+			btnClick:function(){
+				this.list.push(this.content)
+			}
+		}
+	})
+</script>
+</html>

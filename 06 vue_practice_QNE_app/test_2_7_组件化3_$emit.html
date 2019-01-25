@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>组件化</title>
+	<script type="text/javascript" src="./vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="" name="" v-model="inputadditem">
+		<button @click="additem">BUTTON</button>
+		<ul>
+			<item-com v-bind:content="item" 
+			          v-bind:index="index" 
+					  v-for="(item,index) in list"
+						@delete="handledelete">
+				
+			</item-com>		
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+
+	//组件
+	// Vue.component('itemCom',{
+	// 	props:['content'],
+	// 	template:'<li>{{content}}</li>'
+	// })
+
+	var comObject={
+		props:['content','index'],
+		template:'<li @click="deletethisItem">{{content}}</li>',
+		methods:{
+			deletethisItem:function(){
+				this.$emit("delete",this.index)
+			}
+		}
+	}
+
+	var v=new Vue({
+		el:'#app',
+		components:{
+			itemCom:comObject
+		},
+		data:{
+			inputadditem:'',
+			list:['xxx','yyy','zzz']
+		},
+		methods:{
+			additem:function(){
+				this.list.push(this.inputadditem)
+			},
+			handledelete:function(index){
+				this.list.splice(index,1);	
+			}
+		}
+	})
+</script>
+</html>

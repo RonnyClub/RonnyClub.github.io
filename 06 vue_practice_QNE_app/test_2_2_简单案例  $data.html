@@ -1,0 +1,25 @@
+<!-- 简单案例  $data -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World</title>
+	<script type="text/javascript" src="./vue.js"></script>
+</head>
+<body>
+	<div id="app">{{msg}}</div>
+
+	<script type="text/javascript">
+		var v=new Vue({
+			el:'#app',
+			data:{
+				msg:"Hello World"
+			}
+		})
+
+		setTimeout(function(){
+			v.$data.msg="heihei"
+		},2000)
+	</script>
+</body>
+</html>

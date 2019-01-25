@@ -1,0 +1,28 @@
+<!-- ---初始化简单的事件和生命周期----->
+beforeCreate
+
+<!-- ---初始化注入和响应----->
+created
+
+<!-- 判断是否有el和template,确定渲染模板(若无template,按照父组件方式渲染,若有template,按照子组件渲染)----->beforeMount
+
+<!-- ---页面渲染前----->
+mounted
+
+<!-- 实例运行期间,数据data发生变化 -->
+<!-- 数据变化,尚未渲染DOM -->
+beforeUpdate
+<!-- 数据变化,尚未渲染DOM -->
+updated
+
+<!-- 销毁vue实例:vm.$destroy() -->
+<!-- 销毁前 -->
+beforeDestroy
+<!-- 销毁后 -->
+destroyed
+
+
+<!-- 还有三个生命周期函数 -->
+activated
+deactivated
+errorCaptured
