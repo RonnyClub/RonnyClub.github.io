@@ -1,0 +1,47 @@
+大量的vue第三方插件使用了插槽,来学习一下趴
+
+插槽的出现场景:
+如果父组件向子组件传值的content内容,是一段html代码(一段DOM)
+第一种方式,就是直接在写在<div content="<p>hehehe</p><p>hehehe</p><p>hehehe</p><p>hehehe</p><p>hehehe</p><p>hehehe</p><p>hehehe</p>">
+组件模板中:
+template:'<div>
+	<div v-html="this.content"></div>
+</div>'
+这种非常难以阅读使用,并且会留下一个外套的<div>标签
+
+
+
+使用插槽:
+--使用
+--默认内容
+--具名插槽
+
+---------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>computed methods watch</title>
+</head>
+<script type="text/javascript" src="./vue.js"></script>
+<body>
+
+<div id="app">
+	<child>
+		<div slot="header">社就是插入的内容</div>
+	</child>
+	
+</div>
+
+
+</body>
+<script type="text/javascript">
+
+	Vue.component('child',{
+		template:"<div><slot name='header'>默认内容</slot></div>"
+		})
+
+	var vm = new Vue({
+		el:'#app',
+	})
+</script>
+</html>

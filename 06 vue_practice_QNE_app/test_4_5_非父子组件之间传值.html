@@ -1,0 +1,61 @@
+较简单的传值,是在父子组件之间传值
+
+但是如果在组件树中,互相非父子组件,通过父子组件方式传值,弯弯绕太多了
+
+因此需要 非父子组件传值
+
+解决方法:
+1/vuex---较复杂,项目中学习
+
+2/总线方法
+
+本节要点:
+Bus/总线/发布订阅模式/观察者模式
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>组件化</title>
+	<script type="text/javascript" src="./vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<child content="hehe"></child>
+		<child content="dada"></child>
+	</div>
+</body>
+<script type="text/javascript">
+
+	Vue.prototype.bus=new Vue()
+
+	Vue.component("child",{
+		data:function(){
+			return {
+				selfContent:this.content
+			}
+		},
+		props:{
+			content:String
+		},
+		template:"<li @click='childClick'>{{selfContent}}</li>",
+		methods:{
+			childClick:function(){
+				this.bus.$emit('change',this.selfContent)
+			}
+		},
+		mounted(){
+			var this_=this;
+			this.bus.$on('change',function(value){
+				this_.selfContent=value
+
+			})
+		}
+
+	})
+
+
+	var vm=new Vue({
+		el:"#app"
+	})
+</script>
+</html>

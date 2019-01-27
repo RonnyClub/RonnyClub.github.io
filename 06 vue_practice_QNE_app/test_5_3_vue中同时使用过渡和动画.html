@@ -1,0 +1,36 @@
+1/定义元素初始化动画效果:appear 和 appear-active-class
+<transition name="fade" 
+			appear
+			enter-active-class="animated tada" 
+			leave-active-class="animated swing"
+			appear-active-class="animated tada"
+			>
+
+			<div v-show="show">hello world</div>	
+
+</transition>	
+
+2/同时使用 动画(swing/tada等) 和 过渡(transition:opacity 3s 等)
+
+<style type="text/css">
+	.fade-enter,.fade-leave-to{
+		opacity: 0
+	}
+
+	.fade-enter-active
+	.fade-leave-active{
+		transition: opacity 1s;
+	}
+
+</style>
+
+<transition name="fade" 
+			appear
+			enter-active-class="animated tada 	fade-enter-active" 
+			leave-active-class="animated swing	fade-leave-active"
+			appear-active-class="animated tada"
+			>
+
+			<div v-show="show">hello world</div>	
+
+</transition>

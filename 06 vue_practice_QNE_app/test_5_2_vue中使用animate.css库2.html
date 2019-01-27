@@ -1,0 +1,41 @@
+1/利用css3中的@keyframe动画来实现动画效果
+
+2/动画class名可以不使用 v-enter等 ,替换之 ,用 enter-active-class="active" 等等
+
+3/使用Animate.css库
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用@keyframe实现</title>
+	<script type="text/javascript" src="./vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="./animate.css">
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<div id="app">
+		<button @click="handleClick">按钮</button>
+		<transition name="fade" 
+					enter-active-class="animated tada" 
+					leave-active-class="animated swing">
+
+			<div v-show="show">hello world</div>	
+
+		</transition>	
+	</div>
+</body>
+<script type="text/javascript">
+	var vm=new Vue({
+		el:"#app",
+		data:{
+			show:true
+		},
+		methods:{
+			handleClick:function(){
+				this.show=!this.show
+			}
+		}
+	})
+</script>
+</html>

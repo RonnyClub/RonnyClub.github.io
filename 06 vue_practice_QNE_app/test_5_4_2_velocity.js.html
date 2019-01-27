@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用@keyframe实现</title>
+	<script type="text/javascript" src="./vue.js"></script>
+	<script type="text/javascript" src="./velocity.min.js"></script>
+	<style type="text/css">
+	
+	</style>
+</head>
+<body>
+	<div id="app">
+		<button @click="handleClick">按钮</button>
+		<transition 
+			@before-enter="handleBeforeEnter"
+			@enter="handleEnter"
+			@after-enter="handleAfterEnter"
+		>
+			<div v-show="show">hello world</div>	
+		</transition>	
+	</div>
+</body>
+
+<script type="text/javascript">
+	var vm=new Vue({
+		el:"#app",
+		data:{
+			show:true
+		},
+		methods:{
+			handleClick:function(){
+				this.show=!this.show
+				console.log("呵呵哒")
+			},
+			handleBeforeEnter:function(el){
+				el.style.color="red"
+				el.style.opacity=0
+			},
+			handleEnter:function(el,done){
+				Velocity(el,{
+					opacity:1
+				},{
+					duration:1000,
+					complete:done
+				})
+			},
+			handleAfterEnter:function(el){
+				el.style.color="green"
+
+			}
+		}
+	})
+</script>
+</html>
