@@ -1,0 +1,112 @@
+1/阻止多个元素在v-show的显示/隐藏切换中,复用元素标签(会失去动画效果)
+用key="key"
+
+
+---------------------------
+2/<transition>的mode属性:
+	mode="in-out" 先执行进入元素动画,再执行隐藏元素动画	
+	mode="out-in" 反之
+
+<transition mode="in-out">
+	
+</transition>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mode in out</title>
+	<script type="text/javascript" src="./vue.js"></script>
+</head>
+<style type="text/css">
+
+	.v-enter,
+	.v-leave-to{
+		opacity: 0
+	}
+	.v-enter-active,
+	.v-leave-avtive{
+		transition: opacity 2s
+	}
+</style>
+<body>
+	<div id="app">
+		<transition mode="out-in">
+			<div v-if="show" key="h">hello</div>		
+			<div v-else key="b">bye</div>		
+		</transition>
+
+		<button @click="toggle">toggle</button>
+
+	</div>
+</body>
+<script type="text/javascript">
+	var vm = new Vue({
+		el:"#app",
+		data:{
+			show:true,
+		},
+		methods:{
+			toggle:function(){
+				this.show=!this.show;	
+				console.log(this.show)			
+			}
+		}
+	})
+</script>
+</html>
+
+
+---------------------------
+3/用动态组件实现
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>mode in out</title>
+	<script type="text/javascript" src="./vue.js"></script>
+</head>
+<style type="text/css">
+
+	.v-enter,
+	.v-leave-to{
+		opacity: 0
+	}
+	.v-enter-active,
+	.v-leave-avtive{
+		transition: opacity 5s
+	}
+</style>
+<body>
+	<div id="app">
+		<transition mode="in-out">
+			<component :is="type"></component>
+		</transition>
+
+		<button @click="toggle">toggle</button>
+	</div>
+</body>
+<script type="text/javascript">
+
+	Vue.component("child-one",{
+		template:"<li>hello world!!!!!!!</li>"
+	})
+
+	Vue.component("child-two",{
+		template:"<li>bye world!!!!!!!!</li>"
+	})
+
+	var vm = new Vue({
+		el:"#app",
+		data:{
+			show:true,
+			type:"child-one"
+		},
+		methods:{
+			toggle:function(){
+				this.type=this.type==="child-one"? "child-two":"child-one"
+			}
+		}
+	})
+</script>
+</html> -->
