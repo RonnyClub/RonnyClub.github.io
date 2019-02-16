@@ -1,0 +1,152 @@
+------------------------------
+1/创建一个分支
+
+在企业开发中,开发一个新的功能需要先创建找一个分支,在这个分支中来开发需求,最后在并入主分支中
+
+项目文件夹中:
+git pull 将线上分支拉入本地
+git checkout `分支名称`
+
+
+------------------------------
+2/制作轮播图
+
+使用插件: Vue-Awesome-Swiper
+安装插件:npm install vue-awesome-swiper --save
+(指定插件版本:npm install vue-awesome-swiper@2.6.7 --save)
+
+如何使用?
+import Vue from 'vue'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+
+// require styles
+import 'swiper/dist/css/swiper.css'
+
+在main.js中声明使用这个插件方法
+Vue.use(VueAwesomeSwiper)
+
+------------------------------
+(轮播组件:Swiper.vue 第一版本)
+<template>
+	<div class="wrapper">  配置wrapper的宽高,对这里的图片位置进行占位,配置css见下
+		<swiper :options="swiperOption">  配置option,定义在data中
+			<!-- slides -->
+			<swiper-slide>  在第二版中可以用v-for循环出来
+				<img class="swiper-img" src="http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20192/c64e6f7308f67f0862adb64b9d9fcff0.jpg_750x200_37c4c320.jpg" alt="" />
+			</swiper-slide>
+			<swiper-slide>
+				<img class="swiper-img" src="http://img1.qunarzz.com/piao/fusion/1811/a8/cb43c4ac6c215d02.jpg_750x200_83dee994.jpg" alt="" />
+			</swiper-slide>
+
+			<!-- Optional controls -->
+			<div class="swiper-pagination" slot="pagination"></div>
+		</swiper>
+	</div>
+
+</template>
+
+<script>
+	export default {
+		name: 'HomeSwiper',
+		data() {
+			return {
+				swiperOption: {
+					pagination:'.swiper-pagination'  配置选项,显示小圆点
+				}
+			}
+		}
+	}
+</script>
+
+<style lang="stylus" scoped>
+	.wrapper >>> .swiper-pagination-bullet-active
+					  >>> 击穿符号,.wrapper 下的所有组件的.swiper-pagination-bullet-active 均可以在这个组件的css中被定义
+		background:#fff
+	.wrapper
+		overflow:hidden
+		width:100%
+		height:0
+		padding-bottom:31.25%
+	.swiper-img 
+		width:100%;
+</style>
+
+------------------------------
+(父组件:Home.vue)
+<template>
+	<div>
+			<home-header></home-header>
+	这里:	<home-swiper></home-swiper>
+		
+	</div>
+</template>
+
+<script>
+	import HomeHeader from './components/Header'
+	这里:  import HomeSwiper from './components/swiper'
+	export default{
+		name:'Home',
+		components:{
+			HomeHeader,
+	这里:	HomeSwiper
+		}
+	}
+</script>
+
+<style>
+</style>
+
+
+-------------------------------
+(轮播组件:Swiper.vue 第二版本)
+
+<template>
+	<div class="wrapper">
+		<swiper :options="swiperOption">
+			<!-- slides -->
+			<swiper-slide v-for="item of swiperList" :key='item.id'>
+				<img class="swiper-img" :src="item.imgUrl" alt="" />
+			</swiper-slide>
+			
+
+			<!-- Optional controls -->
+			<div class="swiper-pagination" slot="pagination"></div>
+		</swiper>
+	</div>
+
+</template>
+
+<script>
+	export default {
+		name: 'HomeSwiper',
+		data() {
+			return {
+				swiperOption: {
+					pagination:'.swiper-pagination',
+					loop:true   定义图片循环
+				},
+				swiperList:[
+				{
+					id:'0001',
+					imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20192/c64e6f7308f67f0862adb64b9d9fcff0.jpg_750x200_37c4c320.jpg'	
+				},{
+					id:'0002',
+					imgUrl:'http://img1.qunarzz.com/piao/fusion/1811/a8/cb43c4ac6c215d02.jpg_750x200_83dee994.jpg'
+				}
+				]
+			}
+		}
+	}
+</script>
+
+<style lang="stylus" scoped>
+	.wrapper >>> .swiper-pagination-bullet-active
+		background:#fff
+	.wrapper
+		overflow:hidden
+		width:100%
+		height:0
+		padding-bottom:31.25%
+	.swiper-img 
+		width:100%;
+</style>

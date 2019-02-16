@@ -1,0 +1,47 @@
+
+------------------
+1/ css辅助工具 --stylus 帮助开发样式
+
+项目目录下:
+
+npm install stylus --save
+npm install stylus-loader --save
+
+安装好后,启动项目
+
+
+----------------
+2/ index页面(home.vue中)
+     
+<template>
+	<div>
+		<home-header></home-header>					使用组件
+	</div>
+</template>
+
+<script>
+	import HomeHeader from './components/Header' 	import组件
+
+	export default{
+		name:'Home',
+		components:{
+			HomeHeader:HomeHeader    				定义组件
+		}
+	}
+</script>
+
+
+------------------
+3/ 组件页面(header.vue)中
+
+//应用stylus样式,且样式只应用于此页面
+<style lang="stylus" scoped>
+</style>
+
+//用rem来表示元素长宽:
+1 rem = html font-size   =本例中50px
+
+
+
+------------------
+4/需要学习一下flex布局
