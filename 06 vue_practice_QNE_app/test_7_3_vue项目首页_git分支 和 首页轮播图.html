@@ -19,7 +19,7 @@ git checkout `分支名称`
 import Vue from 'vue'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
-// require styles
+// require styles (需要相关css)
 import 'swiper/dist/css/swiper.css'
 
 在main.js中声明使用这个插件方法
@@ -42,7 +42,6 @@ Vue.use(VueAwesomeSwiper)
 			<div class="swiper-pagination" slot="pagination"></div>
 		</swiper>
 	</div>
-
 </template>
 
 <script>
@@ -60,7 +59,7 @@ Vue.use(VueAwesomeSwiper)
 
 <style lang="stylus" scoped>
 	.wrapper >>> .swiper-pagination-bullet-active
-					  >>> 击穿符号,.wrapper 下的所有组件的.swiper-pagination-bullet-active 均可以在这个组件的css中被定义
+					  >>> 击穿符号,.wrapper 下的所有组件的.swiper-pagination-bullet-active 均可以在这里的css中被定义
 		background:#fff
 	.wrapper
 		overflow:hidden
