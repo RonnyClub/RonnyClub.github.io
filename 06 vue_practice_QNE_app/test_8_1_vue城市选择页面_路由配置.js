@@ -60,7 +60,7 @@ export default new Router({
 
 
 ------------------------------------------------
-3/ 城市选择页面雏形
+3/ 城市选择页面Header雏形
 
 <template>
 	<div class="header">城市选择</div>
@@ -87,8 +87,9 @@ export default new Router({
 
 
 ------------------------------------------------------
+
 4/ 增加返回按钮 , 并带有路由跳转功能
-(直接把HomeHeader里面那个弄过来就行了)
+(直接把HomeHeader里面那个按钮弄过来就行了)
 
 <router-link to='/'>
 	<div class="header">
