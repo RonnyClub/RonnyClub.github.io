@@ -1,6 +1,6 @@
 1/ 循环列表的方式展示数据
 		<ul>
-			{
+			{		在DOM结构中嵌入js逻辑,需要用{}包裹起来
 				this.state.list.map((item,index)=>{
 					return <li>{item}</li>
 				})
@@ -90,9 +90,8 @@ handleBtnClick(){
 		
 		
 	(处理函数)
-handleItemClick(index){
-	
-	React中不宜直接修改state内容(不利于后面性能优化),因此拷贝一份list之后再做修改
+	handleItemClick(index){	
+	//React中不宜直接修改state内容(不利于后面性能优化),因此拷贝一份list之后再做修改
 		const list=[...this.state.list]
 		list.splice(index,1)
 		

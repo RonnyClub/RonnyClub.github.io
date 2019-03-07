@@ -16,7 +16,7 @@
 (App.js)---------
 
 	import React,{Component,Fragment} from 'react'
-	import './AppStyle.css'
+	import './AppStyle.css'					!这里引入css
 
 	class App extends Component{
 		

@@ -5,20 +5,20 @@ import React,{Component,Fragment} from 'react';
 class TodoList extends Component{
 	
 	constructor(props){
-		super(props);
+		super(props);			这是认为是固定写法
 		this.state={
-			inputValue:"嘿嘿嘿",
+			inputValue:"嘿嘿嘿",					数据部分!
 			list:[]
-		}
+		}		
 		
 	}
 	
 	render(){
-		return(
+		return(									DOM视图部分!
 			<div>
 				<input 
 					value={this.state.inputValue}
-					onChange={this.handleInputChange.bind(this)}
+					onChange={this.handleInputChange.bind(this)}		.bind认为是固定写法
 				/>
 				<button>提交</button>
 				<ul>
@@ -29,7 +29,7 @@ class TodoList extends Component{
 		)
 	}
 	
-	handleInputChange(e){
+	handleInputChange(e){					逻辑交互部分!
 		this.setState(
 			{
 				inputValue:e.target.value

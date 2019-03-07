@@ -15,7 +15,7 @@ this.input指代了这个<input />的内容
 ------------------------------------------------
 2/ this.setState第二个参数是一个回调函数
 
-this.setState是一个异步函数,平行的函数可能不是按顺序在它的后面执行,很可能是在它之前执行,即使按照顺序应该先执行 this.setState
+this.setState是一个异步函数,平行的函数可能不是按顺序在this.setState的后面执行,很可能是在它之前执行,即使按照顺序应该先执行 this.setState
 通过这个回调函数,可以解决这个问题
 
 关于prevState:

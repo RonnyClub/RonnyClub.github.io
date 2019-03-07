@@ -29,13 +29,13 @@
 			/>
 			
 --------------------------------
-3/ 用innerHTML方式写入文本(标签不转义)
+3/ 用类似innerHTML方式写入文本(标签不转义)
 	dangerouslySetInnerHTML={{__html:item}}
 	
 	<li 
 		key={index} 
 		onClick={this.handleItemClick.bind(this,index)}
-		dangerouslySetInnerHTML={{__html:item}}
+		dangerouslySetInnerHTML={{__html:item}}		两个花括号--外层花括号:我将要写入js逻辑,内层花括号:这里是一个js对象
 	>
 	
 	</li>

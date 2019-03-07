@@ -101,7 +101,7 @@ handleInputChange(e){
 	}
 
 
-//用prevState代替this.state
+//用prevState代替this.state		就这么用,说是可以避免改变this.state
 handleBtnClick(){
 		this.setState((prevState)=>(
 			{list:[...prevState.list,prevState.inputValue]}

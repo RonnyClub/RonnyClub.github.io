@@ -46,4 +46,4 @@ componentDidUpdata(){}
 componentWillUnmount(){}
 
 
-注: 每个组件都有自己的生命周期函数,互相独立
+!注: 每个组件,包括父组件,子组件,兄弟组件等等,都有自己的生命周期函数,互相独立

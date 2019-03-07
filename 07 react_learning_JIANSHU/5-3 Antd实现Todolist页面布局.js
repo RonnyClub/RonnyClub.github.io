@@ -42,3 +42,52 @@ const data = [
 	  dataSource={data}				渲染的数据
 	  renderItem={item => (<List.Item>{item}</List.Item>)}
 	/>
+	
+	
+	
+代码:---------------------------------------------------,
+import React,{Component} from 'react'
+import 'antd/dist/antd.css'
+import { Input,Button,List  } from 'antd'
+import store from './store/index.js'
+
+
+const data = [
+	  'Racing car sprays burning fuel into crowd.',
+	  'Japanese princess to wed commoner.',
+	  'Australian walks 100km after outback crash.',
+	  'Man charged over missing wedding girl.',
+	  'Los Angeles battles huge wildfires.',
+	];
+
+class AntdTodolist extends Component{
+	
+	constructor(props){
+		super(props);
+	}
+		
+	
+	render(){
+		return(
+			<div style={{marginLeft:'30px',marginTop:'30px'}}>
+				<div>
+					<Input value={this.state.inputValue} placeholder="todo content" style={{width:'300px',marginRight:'30px'}} />
+					 <Button type="primary">提交</Button>
+				</div>
+				
+				 <List
+				  style={{width:'300px',marginTop:'10px'}}
+			      header={<div>Header</div>}
+			      footer={<div>Footer</div>}
+			      bordered
+			      dataSource={data}
+			      renderItem={item => (<List.Item>{item}</List.Item>)}
+			    />
+				
+			</div>
+		)
+	}
+
+}
+
+export default AntdTodolist;
