@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Document</title>
-</head>
-<body>
-<p>作品内容利用github的gitpage呈现，国内访问可能速度较慢，烦请耐心等待。</p>
-	<a href="01 静态页面_个人网站/index.html">01 个人网站</a>
-	<br />
-	<a href="02 原生js_轮播图_菜单栏/index.html">02 原生js_轮播图+菜单栏</a>
-		<br />
-
-	<a href="03 jQuery_JD首页_jquery轮播图/index.html">03 jQuery_JD首页+jquery轮播图</a>
-		<br />
-
-	<a href="04 jQuery项目_project_fullpage插件练习/index.html">04 jQuery项目_project_fullpage插件练习</a>
-	<br />
-	<a href="05 bootstrap_practice/index.html">05 bootstrap_practice</a>
-</body>
-</html>
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="icon" type="image/png" href="https://static.baydn.com/static/img/shanbay_favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>shanbay</title><link href="./static/css/app.ad45ae7839b2b3294efc622c1e10e3f6.css" rel="stylesheet"></head><body><div id="app"></div><script type="text/javascript" src="./static/js/manifest.3ad1d5771e9b13dbdad2.js"></script><script type="text/javascript" src="./static/js/vendor.73d4f705c08c74cad70d.js"></script><script type="text/javascript" src="./static/js/app.e8238352a48f9a24dd66.js"></script></body><script>fnResize();
+    window.onresize = function () {
+      fnResize();
+    }
+    function fnResize() {
+      var deviceWidth = document.documentElement.clientWidth || window.innerWidth;
+      if (deviceWidth >= 750) {
+        deviceWidth = 750;
+      }
+      if (deviceWidth <= 320) {
+        deviceWidth = 320;
+      }
+      document.documentElement.style.fontSize = (deviceWidth / 3.75) + 'px';
+    }</script></html>

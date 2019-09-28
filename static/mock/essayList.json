@@ -1,0 +1,77 @@
+{
+  "ret": true,
+  "data": {
+    "sightName": "essay_list",
+    "essayList": [
+      {
+        "id": 1,
+        "title": "Alibaba's UCWeb to Launch an E-Commerce Service in India",
+        "essayContent": "UCWeb,a subsidiary of Chinese giant Alibaba Group,plans to launch an e-commerce",
+        "backUrl": "http://x0.ifengimg.com/res/2019/4953111D65B63E0A5C8AF66BF27B0FD05AE8155E_size55_w550_h365.jpeg",
+        "essayLabel": {
+          "l1": "高考",
+          "l2": "商业",
+          "l3": "431词",
+          "l4": "43"
+        }
+      },
+      {
+        "id": 2,
+        "title": "Google's UCWeb to Launch an E-Commerce Service in India",
+        "essayContent": "UCWeb,a subsidiary of Chinese giant Alibaba Group,plans to launch an e-commerce",
+        "backUrl": "http://x0.ifengimg.com/res/2019/057F65A5003A3BEB35B8EED405D74F2F91C28D23_size553_w600_h399.png",
+        "essayLabel": {
+          "l1": "四级",
+          "l2": "商业",
+          "l3": "431词",
+          "l4": "43"
+        }
+      },
+      {
+        "id": 3,
+        "title": "Apple's UCWeb to Launch an E-Commerce Service in India",
+        "essayContent": "UCWeb,a subsidiary of Chinese giant Alibaba Group,plans to launch an e-commerce",
+        "backUrl": "http://img5.cache.netease.com/tech/2015/6/9/20150609012850acd8c.png",
+        "essayLabel": {
+          "l1": "托福",
+          "l2": "商业",
+          "l3": "431词",
+          "l4": "43"
+        }
+      },
+      {
+        "title": "Alibaba's UCWeb to Launch an E-Commerce Service in India",
+        "essayContent": "UCWeb,a subsidiary of Chinese giant Alibaba Group,plans to launch an e-commerce",
+        "backUrl": "http://x0.ifengimg.com/res/2019/4953111D65B63E0A5C8AF66BF27B0FD05AE8155E_size55_w550_h365.jpeg",
+        "essayLabel": {
+          "l1": "高考",
+          "l2": "商业",
+          "l3": "431词",
+          "l4": "评43"
+        }
+      },
+      {
+        "title": "Google's UCWeb to Launch an E-Commerce Service in India",
+        "essayContent": "UCWeb,a subsidiary of Chinese giant Alibaba Group,plans to launch an e-commerce",
+        "backUrl": "http://x0.ifengimg.com/res/2019/057F65A5003A3BEB35B8EED405D74F2F91C28D23_size553_w600_h399.png",
+        "essayLabel": {
+          "l1": "四级",
+          "l2": "商业",
+          "l3": "431词",
+          "l4": "评43"
+        }
+      },
+      {
+        "title": "Apple's UCWeb to Launch an E-Commerce Service in India",
+        "essayContent": "UCWeb,a subsidiary of Chinese giant Alibaba Group,plans to launch an e-commerce",
+        "backUrl": "http://img5.cache.netease.com/tech/2015/6/9/20150609012850acd8c.png",
+        "essayLabel": {
+          "l1": "托福",
+          "l2": "热点",
+          "l3": "431词",
+          "l4": "评43"
+        }
+      }
+    ]
+  }
+}
